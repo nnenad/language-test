@@ -1,0 +1,12 @@
+version: '2'
+services:
+  languagetest-postgresql:
+    image: postgres:12.3
+    # volumes:
+    #     - ~/volumes/jhipster/LanguageTest/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=LanguageTest
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
